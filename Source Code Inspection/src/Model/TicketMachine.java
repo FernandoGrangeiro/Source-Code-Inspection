@@ -1,4 +1,4 @@
-package br.calebe.ticketmachine.core;
+package Model;
 
 import br.calebe.ticketmachine.exception.PapelMoedaInvalidaException;
 import br.calebe.ticketmachine.exception.SaldoInsuficienteException;

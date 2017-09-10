@@ -1,7 +1,7 @@
 package View;
 
 
-import br.calebe.ticketmachine.core.TicketMachine;
+import Model.TicketMachine;
 import br.calebe.ticketmachine.exception.PapelMoedaInvalidaException;
 import javax.swing.JOptionPane;
 
