@@ -1,3 +1,5 @@
+package View;
+
 
 import br.calebe.ticketmachine.core.TicketMachine;
 import br.calebe.ticketmachine.exception.PapelMoedaInvalidaException;
