@@ -8,23 +8,29 @@ package Controller;
 import Model.TicketMachine;
 import View.Maquina;
 import br.calebe.ticketmachine.exception.PapelMoedaInvalidaException;
+import javax.swing.JOptionPane;
 /**
  *
  * @author ggran
  */
 public class Controller {
     
-        public static void main(String args[]) throws PapelMoedaInvalidaException{
+        public static void main(String args[]) throws PapelMoedaInvalidaException, InterruptedException{
                TicketMachine ticketMachine = new TicketMachine(20);
 
             switch(Maquina.opcoesTicketMachine()){
                 case 0:
-                    ticketMachine.inserir(Maquina.valorInserir());
-                   
+                  int nota = Maquina.valorInserir();
+                  if(TicketMachine.validaNota(nota)){
+                    ticketMachine.inserir(nota);
+                      Maquina.resultadoInserir(true);
+                  }else{
+                      Maquina.resultadoInserir(false);
+                  }
                     break;
             }
             
-            Maquina.mostrarSaldo(ticketMachine.getSaldo());
+           //  Maquina.mostrarSaldo(ticketMachine.getSaldo());
             
             
 
