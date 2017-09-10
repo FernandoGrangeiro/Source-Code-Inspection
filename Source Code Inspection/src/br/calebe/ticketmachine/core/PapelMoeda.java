@@ -11,7 +11,7 @@ public class PapelMoeda {
 
     public PapelMoeda(int valor, int quantidade) {
         this.valor = valor;
-        this.quantidade = quantidade;
+        this.quantidade = quantidade;    
     }
 
     public int getValor() {
