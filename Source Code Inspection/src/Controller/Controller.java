@@ -8,18 +8,20 @@ package Controller;
 import Model.Bilhete;
 import Model.PapelMoeda;
 import Model.TicketMachine;
+
 import View.Maquina;
 import br.calebe.ticketmachine.exception.PapelMoedaInvalidaException;
 
 /**
  *
- * @author ggran
+ * @author ggran e Lucas
  */
 public class Controller {
 
     public static void main(String args[]) throws PapelMoedaInvalidaException, InterruptedException {
         TicketMachine ticketMachine = new TicketMachine();
         Bilhete bilhete = new Bilhete (3);
+        
         int op ;
 
         do{
@@ -47,7 +49,18 @@ public class Controller {
                 }
                     
                 break;
-
+                
+            //troco
+            case 2:
+                if(ticketMachine.getSaldo() ==  0){
+                    Maquina.valorInsuficiente();
+                }else{    
+                    ticketMachine.retirar(bilhete.getValor());
+                    Maquina.retiradaTroco(ticketMachine.getSaldo());
+                }
+                break;
+                    
+                
         }
 
     }while(op != 3);

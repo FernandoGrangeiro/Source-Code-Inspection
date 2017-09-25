@@ -20,6 +20,8 @@ public class TicketMachine {
     public void inserir(int quantia) throws PapelMoedaInvalidaException {
         this.saldo += quantia;
     }
+   
+    
 
     public int getSaldo() {
         return saldo;
@@ -46,4 +48,8 @@ public class TicketMachine {
        this.saldo = this.saldo - valor;
         
     }
+    public void retirar(int quantia) throws PapelMoedaInvalidaException {
+        this.saldo = 0;
+    }
+    
 }
