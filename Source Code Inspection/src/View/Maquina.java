@@ -41,5 +41,11 @@ public class Maquina {
             JOptionPane.showMessageDialog(null, "Nota Invalida");
         }
     }
+    public static  void retiradaTroco(int saldo) {
+        String result = "*****************\n";
+        result += "*** R$ " + saldo + ",00 ****\n";
+        result += "*****************\n";
+        JOptionPane.showMessageDialog(null, result);
+    }
 
 }
