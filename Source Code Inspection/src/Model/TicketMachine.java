@@ -20,6 +20,10 @@ public class TicketMachine {
     public void inserir(int quantia) throws PapelMoedaInvalidaException {
         this.saldo += quantia;
     }
+    
+    public void setSaldo(int saldo){
+        this.saldo = saldo;
+    }
    
     
 

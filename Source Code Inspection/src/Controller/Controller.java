@@ -64,7 +64,8 @@ public class Controller {
                         List<PapelMoeda> papel = troco.getValorQtd();
                         for (PapelMoeda p : papel) {
                             if (p.getQuantidade() > 0) {
-                                Maquina.retiradaTroco("Senhor o valor do seu troco é "+ p.getValor()+ "\nA quantidade é "+p.getQuantidade());                                
+                                Maquina.retiradaTroco("Senhor o valor do seu troco é "+ p.getValor()+ "\nA quantidade é "+p.getQuantidade());       
+                                ticketMachine.setSaldo(0);
                             }
                         }
 
